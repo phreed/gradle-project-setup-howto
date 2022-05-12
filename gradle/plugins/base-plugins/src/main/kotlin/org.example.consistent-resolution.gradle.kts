@@ -1,5 +1,6 @@
 plugins {
     id("java")
+    id("org.example.dependency-analysis-project")
 }
 
 // Expose the ':app' project runtime classpath in every project
