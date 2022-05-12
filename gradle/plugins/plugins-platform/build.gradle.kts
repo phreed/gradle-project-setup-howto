@@ -3,6 +3,7 @@ plugins {
 }
 
 dependencies.constraints {
+    api("com.autonomousapps:dependency-analysis-gradle-plugin:1.2.0")
     api("de.jjohannes.gradle:extra-java-module-info:0.12")
     api("de.jjohannes.gradle:java-ecosystem-capabilities:0.4")
     api("de.jjohannes.gradle:java-module-dependencies:0.7")

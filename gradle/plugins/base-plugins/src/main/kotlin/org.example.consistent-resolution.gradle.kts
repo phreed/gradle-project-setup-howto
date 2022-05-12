@@ -1,6 +1,7 @@
 plugins {
     id("java")
     id("de.jjohannes.extra-java-module-info")
+    id("org.example.dependency-analysis-project")
 }
 
 // Expose the ':app' project runtime classpath in every project

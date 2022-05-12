@@ -1,4 +1,5 @@
 plugins {
+    id("org.example.dependency-analysis-root")
 }
 
 // Configure the ':tasks' task of the root project to only show
