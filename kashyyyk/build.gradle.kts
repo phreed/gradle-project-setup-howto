@@ -1,3 +1,3 @@
 plugins {
-    id("org.example.java-library")
+    id("org.example.java-library-with-whitebox-tests")
 }

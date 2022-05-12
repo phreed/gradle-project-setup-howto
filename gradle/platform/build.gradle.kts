@@ -14,16 +14,18 @@ dependencies {
 }
 
 dependencies.constraints {
-    api("com.github.racc:typesafeconfig-guice:0.1.0")
-    api("com.sun.activation:jakarta.activation:1.2.2") { version { reject("[2.0.0,)") } } // Upgrade to 2.x requires newer Jakarta APIs
-    api("com.sun.mail:jakarta.mail:1.6.7") { version { reject("[2.0.0,)") } } // Upgrade to 2.x requires newer Jakarta APIs
-    api("jakarta.inject:jakarta.inject-api:1.0.5") { version { reject("[2.0.0,)") } } // Upgrade to 2.x requires newer Jakarta APIs
-    api("jakarta.servlet:jakarta.servlet-api:4.0.4") { version { reject("[5.0.0,)") } } // Stay Tomcat 8 compatible
-    api("junit:junit:4.13.2")
-    api("org.apache.solr:solr-solrj:7.7.3") { version { reject("[8.0.0,)") } } // API changes in 8 require production code changes
-    api("org.apache.velocity:velocity-engine-core:2.3")
-    api("org.apache.zookeeper:zookeeper:3.8.0")
-    api("org.assertj:assertj-core:3.22.0")
-    api("org.opensaml:opensaml:2.6.4")
-    api("org.reflections:reflections:0.9.11") { version { reject("[0.9.12,)") } } // Upgrade breaks 'com.github.racc:typesafeconfig-guice'
+    javaModuleDependencies {
+        api(gav("com.github.racc.typesafeconfigguice", "0.1.0"))
+        api(gav("jakarta.activation", "1.2.2")) { version { reject("[2.0.0,)") } } // Upgrade to 2.x requires newer Jakarta APIs
+        api(gav("jakarta.mail", "1.6.7")) { version { reject("[2.0.0,)") } } // Upgrade to 2.x requires newer Jakarta APIs
+        api(gav("java.inject", "1.0.5")) { version { reject("[2.0.0,)") } } // Upgrade to 2.x requires newer Jakarta APIs
+        api(gav("java.servlet", "4.0.4")) { version { reject("[5.0.0,)") } } // Stay Tomcat 8 compatible
+        api(gav("junit", "4.13.2"))
+        api(gav("org.apache.solr.solrj", "7.7.3")) { version { reject("[8.0.0,)") } } // API changes, further upgrades require production code changes
+        api(gav("org.apache.zookeeper", "3.8.0"))
+        api(gav("org.assertj.core", "3.22.0"))
+        api(gav("org.opensaml", "2.6.4"))
+        api(gav("org.reflections", "0.9.11")) { version { reject("[0.9.12,)") } } // Upgrade breaks 'com.github.racc:typesafeconfig-guice'
+        api(gav("velocity.engine.core", "2.3"))
+    }
 }

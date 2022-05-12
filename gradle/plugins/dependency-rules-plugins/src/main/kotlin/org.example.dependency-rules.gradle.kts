@@ -9,6 +9,7 @@ plugins {
     id("de.jjohannes.java-ecosystem-capabilities")
     id("de.jjohannes.missing-metadata-guava")
     id("dev.jacomet.logging-capabilities")
+    id("org.example.java-modules-dependency-rules")
 }
 
 // Configure logging capabilities plugin to default to Slf4JSimple

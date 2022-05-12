@@ -25,8 +25,10 @@ tasks.withType<Test>().configureEach {
 
 // Configure common test runtime dependencies for *all* projects
 dependencies {
-    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine")
-    testRuntimeOnly("org.slf4j:slf4j-simple")
+    javaModuleDependencies {
+        testRuntimeOnly(ga("org.junit.jupiter.engine"))
+        testRuntimeOnly(ga("org.slf4j.simple"))
+    }
 }
 
 // Add a 'compileAll' task to run all of Java compilation in one go

@@ -1,5 +1,6 @@
 plugins {
     id("java")
+    id("de.jjohannes.extra-java-module-info")
 }
 
 // Expose the ':app' project runtime classpath in every project
@@ -29,3 +30,6 @@ sourceSets.all {
         dependencies.add(implementationConfigurationName, dependencies.platform("org.example.product:platform"))
     }
 }
+
+// We use the merge Jar feature of 'extra-java-module-info' and javaModulesMergeJars also needs to get version from somewhere
+configurations.javaModulesMergeJars.get().shouldResolveConsistentlyWith(appRuntimeClasspath)
