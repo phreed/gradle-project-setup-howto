@@ -7,4 +7,6 @@ dependencies {
 
     implementation(project(":dependency-analysis-plugins"))
     implementation(project(":dependency-rules-plugins"))
+
+    implementation("com.android.tools.build:gradle")
 }

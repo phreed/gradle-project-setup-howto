@@ -5,6 +5,7 @@ package org.example.dependencyanalysis
  */
 val configurationPrefixesToSkip = listOf(
     // Configurations internally used by plugins
+    "_internal-",
     "dependencyVersionUpgrades",
     "embeddedKotlin",
     "jacoco",

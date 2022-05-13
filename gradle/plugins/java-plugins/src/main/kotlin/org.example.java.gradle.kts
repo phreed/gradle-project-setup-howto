@@ -2,12 +2,12 @@ plugins {
     id("java")
     id("jacoco") // Record test coverage data during test execution
     id("org.example.base")
-    id("org.example.consistent-resolution")
+    id("org.example.consistent-resolution-java")
 }
 
 // Configure Java compilation on java {} extension or directly on 'JavaCompile' tasks
 java {
-    toolchain.languageVersion.set(JavaLanguageVersion.of(17))
+    toolchain.languageVersion.set(JavaLanguageVersion.of(11))
 }
 tasks.withType<JavaCompile>().configureEach {
     options.encoding = "UTF-8"
