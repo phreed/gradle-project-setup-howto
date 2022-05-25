@@ -9,6 +9,7 @@ application {
 dependencies {
     providedCompile("jakarta.servlet:jakarta.servlet-api")
 
+    implementation(project(":alderaan"))
     implementation(project(":bespin"))
     implementation(project(":corellia"))
     implementation(project(":kamino"))
