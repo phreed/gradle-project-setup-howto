@@ -6,8 +6,14 @@ plugins {
 }
 
 // Configure Java compilation on java {} extension or directly on 'JavaCompile' tasks
-java {
-    toolchain.languageVersion.set(JavaLanguageVersion.of(17))
+kotlin {
+    jvmToolchain {
+        when (this) {
+            is JavaToolchainSpec -> {
+                languageVersion.set(JavaLanguageVersion.of("8"))
+            }
+        }
+    }
 }
 tasks.withType<JavaCompile>().configureEach {
     options.encoding = "UTF-8"

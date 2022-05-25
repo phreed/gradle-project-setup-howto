@@ -1,5 +1,6 @@
 package org.example.product.kashyyyk;
 
+import org.example.product.alderaan.AlderaanModule;
 import org.example.product.bespin.BespinModule;
 import org.example.product.kamino.KaminoModule;
 import org.example.product.naboo.NabooModule;

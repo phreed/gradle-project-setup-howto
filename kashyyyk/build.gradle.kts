@@ -6,6 +6,7 @@ dependencies {
     api(project(":naboo"))
     api(project(":tatooine"))
 
+    implementation(project(":alderaan"))
     implementation(project(":bespin"))
     implementation(project(":kamino"))
 
