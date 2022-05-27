@@ -6,15 +6,15 @@ plugins {
 }
 
 // Configure Java compilation on java {} extension or directly on 'JavaCompile' tasks
-kotlin {
-    jvmToolchain {
-        when (this) {
-            is JavaToolchainSpec -> {
-                languageVersion.set(JavaLanguageVersion.of("8"))
-            }
-        }
-    }
-}
+//kotlin {
+//    jvmToolchain {
+//        when (this) {
+//            is JavaToolchainSpec -> {
+//                languageVersion.set(JavaLanguageVersion.of("8"))
+//            }
+//        }
+//    }
+//}
 tasks.withType<JavaCompile>().configureEach {
     options.encoding = "UTF-8"
 }
@@ -31,8 +31,8 @@ tasks.withType<Test>().configureEach {
 
 // Configure common test runtime dependencies for *all* projects
 dependencies {
-    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine")
-    testRuntimeOnly("org.slf4j:slf4j-simple")
+//    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine")
+//    testRuntimeOnly("org.slf4j:slf4j-simple")
 }
 
 // Add a 'compileAll' task to run all of Java compilation in one go

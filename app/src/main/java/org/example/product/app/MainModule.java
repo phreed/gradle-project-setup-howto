@@ -2,7 +2,7 @@ package org.example.product.app;
 
 import com.google.inject.Guice;
 import com.google.inject.servlet.SessionScoped;
-import org.example.product.alderaan.AlderaanModule;
+//import org.example.product.alderaan.AlderaanModule;
 import org.example.product.bespin.BespinModule;
 import org.example.product.kamino.KaminoModule;
 import org.example.product.kashyyyk.KashyyykModule;
